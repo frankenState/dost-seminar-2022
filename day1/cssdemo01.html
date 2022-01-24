@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family:Georgia, 'Times New Roman', Times, serif
+        }
+
+        form.form {
+            padding: 10px 5px 10px 5px;
+            margin: 10px 5px 10px 5px;
+        }
+
+        form.form #email, form.form #password, button {
+            border:none;
+        }
+
+        form.form #email, form.form #password {
+            padding: 8px 6px 8px 6px;
+            border-bottom: 2px solid #fc3030;
+            margin-bottom: 10px;
+        }
+
+        form.form button {
+            padding: 15px 10px 15px 10px;
+            border-radius: 4px;
+            color: rgb(80, 78, 78);
+
+        }
+    </style>
+</head>
+<body>
+    <form class="form">
+        <input id="email" type="email" placeholder="Email" /><br/>
+        <input id="password" type="password" placeholder="Password" /><br/>
+        <button>Login</button>
+    </form>
+    <script>
+        let number = 10;
+        console.log("Data Type of number:", typeof number);
+        let name = "Jane Doe";
+        console.log("Data Type of name:", typeof name);
+        let student = {
+            firstname: 'James',
+            lastname: 'Gosling'
+        };
+        console.log("Data Type of student :", typeof student);
+        console.log("Student Fullname: ", `${student.firstname} ${student.lastname}`);
+
+        let n1 = 10, n2 = 30;
+        // + addition
+        console.log("10 + 30 =", n1 + n2);
+        // - subtraction
+        console.log("10 - 30 =", n1 - n2);
+        // * Multiplication
+        console.log("10 * 30 =", n1 * n2);
+        // ** exponentiation  (ES2016)
+        console.log("10 ^ 2 =", n1 ** 2);
+        // / Division
+        console.log("30 / 10 =", n2 / 10);
+        // Post-Increment operator
+        n2++;
+        console.log("n2++ =", n2);
+        // Pre-Increment operator
+        console.log("++n2 =", ++n2);
+        // Post-Decrement operator
+        n2--
+        console.log("n2-- =", n2);
+        // Pre-Decrement operator
+        console.log("--n2 =", --n2);
+        // Modulus (Division Remainder)
+        console.log("n2%2 =", n2%2);
+
+        let x = 10;
+        x += 5;
+        console.log("x += 5 :", x);
+        x -= 2;
+        console.log("x -= 2 :", x);
+        x *= 2;
+        console.log("x *= 2 :", x);
+        x /= 2;
+        console.log("x /= 2 :", x);
+        x **= 2;
+        console.log("x **= 2 :", x);
+
+        // Single COmment
+        /*
+            Multi line comment
+        */
+
+        // Javascript String operators
+        let text1 = "John";
+        let text2 = "Doe";
+        console.log(text1 + " " + text2);
+        console.log(`${text1} ${text2}`);
+
+        text1 += " " + text2;
+        console.log(text1);
+
+        console.log("Checking 5+'5':", 5 + "5");
+        console.log("Checking 5+'5':", 5 + parseInt("5"));
+
+        // Javascript comparision operators
+        // == equal to
+        let i = 10, j = 16;
+        console.log("i == j:", i == j);
+        // === equal value and equal type
+        console.log("i === j", i === j);
+        // != not equal
+        console.log("i != j:", i != j);
+        // !== not equal value or not equal type
+        console.log("i !== j:", i !== j);
+        // > greater than
+        console.log("i > j:", i > j);
+        // < less than
+        console.log("i < j: ", i < j);
+        // >= greater than or equal
+        console.log("i >= j:", i >= j);
+        // <= less than or equal
+        console.log("i <= j:", i <= j);
+
+        (j % 2 == 0) ? console.log("j is even") : console.log("j is odd");
+        
+        let boo1 = false, boo2 = true;
+        // Javascript Logical Operators
+        console.log("&& :", boo1 && boo2);
+        console.log("|| :", boo1 || boo2);
+        console.log("!boo1 :", !boo1, "!boo2 :", !boo2);
+        console.log(typeof boo1);
+
+        
+    </script>
+</body>
+</html>

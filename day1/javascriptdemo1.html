@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Demo1</h1>
+    <div id="students"></div>
+    <script>
+
+        function sum(n1, n2){
+            return n1 + n2;
+        }
+
+        console.log(sum(10, 12));
+
+        let subtract = (n1, n2) => {
+            return n1 - n2;
+        }
+
+        console.log("subtract(10,6):", subtract(10, 6));
+
+        let multiply = (n1, n2) =>  n1 * n2;
+
+        console.log("multiply(20, 3):", multiply(20, 3));
+
+
+        class Person {
+            constructor(fullname, birthdate){
+                this.fullname = fullname;
+                this.birthdate = birthdate;
+            }
+        }
+
+        let p1 = new Person("John Doe", "12-31-1998");
+        console.log(p1);
+
+        class Student extends Person {
+            constructor(fullname, birthdate, s_id){
+                super(fullname, birthdate);
+                this.s_id = s_id;
+            }
+        }
+
+        let s1 = new Student("Tim Berners Lee", "12'31-1997", "S1_2022");
+
+        console.log(s1);
+
+        class SA extends Student {
+            constructor(fullname, birthdate, s_id, office){
+                super(fullname, birthdate, s_id);
+                this.office = office;
+            }
+        }
+
+        let sa1 = new SA("Walter Orien", "12-31-1996", "S2_2022", "Registrar");
+
+        console.log(sa1);
+
+        let students = [];
+
+        students.push(s1)
+        students.push(
+            new Student("Mark Collins", "12-31-1995", "S3_2022")
+        );
+
+        students.push(
+            new Student("Tobias Curtis", "12-31-1992", "S4_2022")
+        );
+
+        students.push(
+            new Student("Branden Eich", "12-31-1993", "S5_2022")
+        );
+
+        students.push(
+            new Student("Mark Doe", "12-31-1994", "S6_2022")
+        );
+
+        console.log("Students=>", students);
+
+        let html = '';
+        students.forEach( (student) => {
+            html += `
+            <div>
+                <h3>${student.fullname}</h3>
+                <small>${student.s_id}</small>
+            </div>
+            `
+        });
+
+        console.log(typeof students);
+
+        document.getElementById('students').innerHTML = html;
+    </script>
+</body>
+</html>
