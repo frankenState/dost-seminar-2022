@@ -44,6 +44,9 @@ Route::prefix('test')->group(function(){
 
 Route::prefix('pages')->group(function(){
    Route::get('/test', [PagesController::class, 'test'])->name('pages.test');
+   Route::get('/contact-us', [PagesController::class, 'contacts'])->name('pages.contacts');
+   Route::get('/',  [PagesController::class, 'welcome'])->name('pages.welcome');
+   
 });
 
 Auth::routes();
