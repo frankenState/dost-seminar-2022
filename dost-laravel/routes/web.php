@@ -15,13 +15,14 @@ use App\Http\Controllers\PagesController;
 |
 */
 
-Route::get('/', function () {
-   $name = 'Jane Doe';
+// Route::get('/', function () {
+//    $name = 'Jane Doe';
 
-   return view('welcome', [
-      'name' => $name
-   ]);
-});
+//    return view('welcome', [
+//       'name' => $name,
+//       'names' => [],
+//    ]);
+// });
 
 
 
@@ -53,4 +54,4 @@ Auth::routes();
 
 
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
